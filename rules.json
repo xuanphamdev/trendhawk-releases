@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "rulesVersion": 4,
+  "rulesVersion": 5,
   "api": {
     "itemListPath": "/api/post/item_list/",
     "fields": {
@@ -85,7 +85,8 @@
     }
   },
   "scan": {
-    "channelTimeoutMs": 240000,
+    "channelTimeoutMs": 60000,
+    "channelMaxMs": 900000,
     "delayMinMs": 3000,
     "delayMaxMs": 8000,
     "restartEveryChannels": 20,
