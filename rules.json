@@ -1,7 +1,6 @@
 {
   "schemaVersion": 1,
-  "rulesVersion": 2,
-  "minAppVersion": "1.0.0",
+  "rulesVersion": 3,
   "api": {
     "itemListPath": "/api/post/item_list/",
     "fields": {
@@ -10,7 +9,36 @@
       "createTime": "createTime",
       "playCount": "stats.playCount",
       "isPinned": "isPinnedItem",
-      "hasMore": "hasMore"
+      "hasMore": "hasMore",
+      "desc": "desc",
+      "hashtags": "textExtra",
+      "hashtagName": "hashtagName",
+      "music": "music.title",
+      "duration": "video.duration",
+      "isAd": "isAd",
+      "likes": "stats.diggCount",
+      "comments": "stats.commentCount",
+      "shares": "stats.shareCount",
+      "saves": "stats.collectCount",
+      "anchors": "anchors"
+    },
+    "anchor": {
+      "extra": "extra",
+      "productId": "id",
+      "inner": "extra",
+      "title": "title",
+      "images": "img_url",
+      "cover": "cover_url",
+      "categories": "categories",
+      "categoryId": "category_id",
+      "categoryName": "category_name",
+      "categoryLevel": "level",
+      "sellerId": "seller_id",
+      "url": "seo_url",
+      "price": "price",
+      "marketPrice": "market_price",
+      "currency": "currency",
+      "skus": "skus"
     }
   },
   "selectors": {
@@ -64,5 +92,6 @@
     "maxScrollRounds": 1200,
     "viewMismatchRatio": 0.05,
     "textMaxChars": 20000
-  }
+  },
+  "minAppVersion": "1.0.0"
 }
