@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "rulesVersion": 3,
+  "rulesVersion": 4,
   "api": {
     "itemListPath": "/api/post/item_list/",
     "fields": {
@@ -20,7 +20,10 @@
       "comments": "stats.commentCount",
       "shares": "stats.shareCount",
       "saves": "stats.collectCount",
-      "anchors": "anchors"
+      "anchors": "anchors",
+      "authorId": "author.uniqueId",
+      "authorName": "author.nickname",
+      "authorAvatar": "author.avatarThumb"
     },
     "anchor": {
       "extra": "extra",
@@ -49,6 +52,8 @@
     "gridRootFallback": "main,[role=\"main\"]",
     "gridLink": "a[href*=\"/video/\"]",
     "gridExclude": "aside,nav,header,footer,[role=\"dialog\"]",
+    "profileName": "[data-e2e=\"user-title\"]",
+    "profileAvatar": "[data-e2e=\"user-avatar\"] img",
     "card": "[data-e2e=\"user-post-item\"],[data-e2e=\"user-post-item-container\"],[class*=\"DivItemContainer\"]",
     "viewCount": [
       "[data-e2e=\"video-views\"]",
