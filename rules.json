@@ -1,5 +1,64 @@
 {
   "schemaVersion": 1,
-  "rulesVersion": 0,
-  "rules": {}
+  "rulesVersion": 1,
+  "minAppVersion": "1.0.0",
+  "api": {
+    "itemListPath": "/api/post/item_list/",
+    "fields": {
+      "itemList": "itemList",
+      "id": "id",
+      "createTime": "createTime",
+      "playCount": "stats.playCount",
+      "isPinned": "isPinnedItem",
+      "hasMore": "hasMore"
+    }
+  },
+  "selectors": {
+    "captcha": ".captcha-verify-container, #captcha-verify-container-main-page",
+    "loginModal": "[data-e2e=\"login-modal\"]",
+    "loginModalClose": "[data-e2e=\"modal-close-inner-button\"]",
+    "gridRoot": "[data-e2e=\"user-post-item-list\"]",
+    "gridRootFallback": "main,[role=\"main\"]",
+    "gridLink": "a[href*=\"/video/\"]",
+    "gridExclude": "aside,nav,header,footer,[role=\"dialog\"]",
+    "card": "[data-e2e=\"user-post-item\"],[data-e2e=\"user-post-item-container\"],[class*=\"DivItemContainer\"]",
+    "viewCount": [
+      "[data-e2e=\"video-views\"]",
+      "[data-e2e*=\"video-views\"],[data-e2e=\"video-view-count\"]",
+      "[class*=\"VideoCount\"],[class*=\"ViewCount\"]"
+    ],
+    "embeddedJson": "script#SIGI_STATE,script#__UNIVERSAL_DATA_FOR_REHYDRATION__"
+  },
+  "text": {
+    "profileNotFound": {
+      "pattern": "không thể tìm thấy tài khoản này|couldn['’]t find this account|could not find this account|account not found",
+      "flags": "i"
+    },
+    "profilePrivate": {
+      "pattern": "tài khoản này là riêng tư|this account is private",
+      "flags": "i"
+    },
+    "viewLabel": {
+      "pattern": "^(?:views?|lượt\\s*xem)\\s*[:：]?\\s*([\\d.,]+\\s*(?:K|M|B|N|nghìn|Tr|triệu|tỷ)?)$|^([\\d.,]+\\s*(?:K|M|B|N|nghìn|Tr|triệu|tỷ)?)\\s*(?:views?|lượt\\s*xem)$",
+      "flags": "i"
+    },
+    "loginUrl": {
+      "pattern": "/login",
+      "flags": ""
+    }
+  },
+  "scan": {
+    "channelTimeoutMs": 240000,
+    "delayMinMs": 3000,
+    "delayMaxMs": 8000,
+    "restartEveryChannels": 20,
+    "maxLoginModalCloses": 5,
+    "extraPagesAfterOlder": 1,
+    "apiSilenceFallbackMs": 15000,
+    "domOldBatchStreak": 4,
+    "domStalledRounds": 24,
+    "maxScrollRounds": 1200,
+    "viewMismatchRatio": 0.05,
+    "textMaxChars": 20000
+  }
 }
