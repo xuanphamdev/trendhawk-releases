@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "rulesVersion": 1,
+  "rulesVersion": 2,
   "minAppVersion": "1.0.0",
   "api": {
     "itemListPath": "/api/post/item_list/",
@@ -36,6 +36,10 @@
     },
     "profilePrivate": {
       "pattern": "tài khoản này là riêng tư|this account is private",
+      "flags": "i"
+    },
+    "serverError": {
+      "pattern": "something went wrong|đã xảy ra lỗi|có lỗi xảy ra|đã có lỗi xảy ra",
       "flags": "i"
     },
     "viewLabel": {
